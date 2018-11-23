@@ -9,7 +9,6 @@
 #define M_USRP_HOST_IP "127.0.0.1"
 
 void print_beacon_data(unsigned char *buf, size_t size);
-void save_beacon_data(unsigned char *buf, size_t size);
 int beacon_receive_packet(int spifd, unsigned char *data, int *len);
 
 #endif
