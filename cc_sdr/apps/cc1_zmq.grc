@@ -152,45 +152,6 @@
     </param>
   </block>
   <block>
-    <key>CC_9600_TX</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(480, 329)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>CC_9600_TX_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
     <key>CC_Byte_Synchronizer</key>
     <param>
       <key>alias</key>
@@ -286,65 +247,6 @@
     <param>
       <key>vlen</key>
       <value>1</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_socket_pdu</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(280, 303)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>host</key>
-      <value></value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_socket_pdu_0_0</value>
-    </param>
-    <param>
-      <key>mtu</key>
-      <value>223</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>port</key>
-      <value>52001</value>
-    </param>
-    <param>
-      <key>tcp_no_delay</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>"UDP_SERVER"</value>
     </param>
   </block>
   <block>
@@ -580,61 +482,6 @@
     </param>
   </block>
   <block>
-    <key>zeromq_push_sink</key>
-    <param>
-      <key>address</key>
-      <value>tcp://*:52025</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(864, 310)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>hwm</key>
-      <value>-1</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>zeromq_push_sink_0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>pass_tags</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>timeout</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
     <key>zeromq_sub_source</key>
     <param>
       <key>address</key>
@@ -722,22 +569,10 @@
     <sink_key>1</sink_key>
   </connection>
   <connection>
-    <source_block_id>CC_9600_TX_0</source_block_id>
-    <sink_block_id>zeromq_push_sink_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
     <source_block_id>CC_Byte_Synchronizer_0</source_block_id>
     <sink_block_id>telemetry_handler_cc1_check_beacon_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>in</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_socket_pdu_0_0</source_block_id>
-    <sink_block_id>CC_9600_TX_0</sink_block_id>
-    <source_key>pdus</source_key>
-    <sink_key>packet</sink_key>
   </connection>
   <connection>
     <source_block_id>low_pass_filter_0</source_block_id>
