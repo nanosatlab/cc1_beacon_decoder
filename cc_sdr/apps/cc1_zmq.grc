@@ -269,66 +269,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(24, 479)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>180</value>
-    </param>
-    <param>
-      <key>host</key>
-      <value></value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_socket_pdu_0_0_1</value>
-    </param>
-    <param>
-      <key>mtu</key>
-      <value>223</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>port</key>
-      <value>52000</value>
-    </param>
-    <param>
-      <key>tcp_no_delay</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>"TCP_SERVER"</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_socket_pdu</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(24, 575)</value>
+      <value>(200, 495)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -443,45 +384,6 @@
     </param>
   </block>
   <block>
-    <key>telemetry_handler_cc1_check_beacon</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(184, 505)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>180</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>telemetry_handler_cc1_check_beacon_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
     <key>zeromq_sub_source</key>
     <param>
       <key>address</key>
@@ -570,27 +472,15 @@
   </connection>
   <connection>
     <source_block_id>CC_Byte_Synchronizer_0</source_block_id>
-    <sink_block_id>telemetry_handler_cc1_check_beacon_0</sink_block_id>
+    <sink_block_id>blocks_socket_pdu_0_0_1_0</sink_block_id>
     <source_key>out</source_key>
-    <sink_key>in</sink_key>
+    <sink_key>pdus</sink_key>
   </connection>
   <connection>
     <source_block_id>low_pass_filter_0</source_block_id>
     <sink_block_id>CC_9600_RX_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>telemetry_handler_cc1_check_beacon_0</source_block_id>
-    <sink_block_id>blocks_socket_pdu_0_0_1_0</sink_block_id>
-    <source_key>beacon</source_key>
-    <sink_key>pdus</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>telemetry_handler_cc1_check_beacon_0</source_block_id>
-    <sink_block_id>blocks_socket_pdu_0_0_1</sink_block_id>
-    <source_key>data</source_key>
-    <sink_key>pdus</sink_key>
   </connection>
   <connection>
     <source_block_id>zeromq_sub_source_0</source_block_id>
